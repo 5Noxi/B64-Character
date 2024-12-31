@@ -6,6 +6,9 @@ Takes a single character as input and returns an obfuscated representation of th
 ### After
 ![after](https://github.com/5Noxi/Charfuscator/blob/main/After.png?raw=true)
 
+## Discord Server 
+- https://discord.gg/E2ybG4j9jU
+
 ## How it works
 1. Gets content of input
 2. Obfuscates content - replaces each character in the script with an obfuscated equivalent ([char])

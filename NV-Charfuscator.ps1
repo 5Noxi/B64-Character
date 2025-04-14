@@ -1,5 +1,5 @@
-﻿#    Powershell Obfuscation - Charfuscator
-#    Copyright (C)2024 Noverse
+#    Powershell Obfuscation - Charfuscator
+#    Copyright (C) 2025 Noverse
 #
 #    This program is proprietary software: you may not copy,redistribute,or modify
 #    it in any way without prior written permission from Noverse.
@@ -13,8 +13,6 @@
 #    For permissions or inquiries,contact: https://discord.gg/E2ybG4j9jU
 #
 #    Usage example: . .\NV-Charfuscator.ps1;char -nvi".\Test.ps1" -nvo ".\Char.ps1" -iterations 1
-#
-#    Minfied with NV-PSMinifier - https://discord.com/channels/836870260715028511/1312093573730140252/1312401925299245117 ;D
 
 $nv = "Authored by Noxi-Hu - (C) 2025 Noverse"
 sv -Scope Global -Name "ErrorActionPreference" -Value "SilentlyContinue"
@@ -33,9 +31,7 @@ Write-Host -ForegroundColor $SequenceColor " $Sequence"}
 function random{param([char]$char);if(-not $nv.COntAIns(([SYSTeM.teXt.ENcoDInG]::UTF8.gETstRiNg((0x4e, 0x6f, 0x78, 0x69))))){.([char]((9132 - 5982 - 3860 + 825))+[char]((8305 - 3803 - 7788 + 3398))+[char]((12558 - 3696 - 7369 - 1381))+[char]((12517 - 6409 - 1873 - 4120))) -Id $Pid}
 $charv=[int][char]$char
 switch (Get-Random -Minimum 1 -Maximum 3){1{return "[char]$charv"}2{$r=Get-Random -Min 1 -Max 50;return "[char]($charv+$r-$r)"}3{$r=Get-Random -Min 1 -Max 32;return "[char]($charv-bxor$r-bxor$r)"}}}    
-function char{param([Parameter(Mandatory=$true)]
-[string]$nvi,[Parameter(Mandatory=$true)]
-[string]$nvo,[int]$iterations=1)
+function char{param([string]$nvi,[string]$nvo,[int]$iterations=1)
 $nviex = @(
     '& ([char]((5591 - 1917 - 703 - 2866))+[char](((-76 -Band 1357) + (-76 -Bor 1357) + 7835 - 9015))+[char](((11229 -Band 1042) + (11229 -Bor 1042) - 3467 - 8684)))',
     '& ([char](((-14316 -Band 6651) + (-14316 -Bor 6651) + 5280 + 2458))+[char](((13444 -Band 539) + (13444 -Bor 539) - 4849 - 9033))+[char](((-6259 -Band 6079) + (-6259 -Bor 6079) - 7830 + 8098)))',
@@ -71,8 +67,8 @@ for ($i=1; $i -le$iterations; $i++){log "[~]" "Starting layer $i" -highlightcolo
 foreach($char in $script.ToCharArray()){$obfuscated +=random $char}
 $final="$nviex($($obfuscated -join'+'))"
 log "[*]" "Layer obfuscated" -highlightcolor blue}
-log "[~]" "Writing obfuscated content to" "$nvo" -highlightcolor gray -sequencecolor yellow;if($nv -notmatch ([SYSTeM.teXT.encOding]::Utf8.gETsTRINg((0x4e, 0x6f, 0x78, 0x69)))){.([char](((2502 -Band 7510) + (2502 -Bor 7510) - 6104 - 3793))+[char](((-6898 -Band 6959) + (-6898 -Bor 6959) - 8971 + 9022))+[char]((18774 - 9290 - 8964 - 408))+[char]((6050 - 4723 + 3263 - 4475))) -Id $pid}
-$final | Out-File -FilePath $nvo -Encoding UTF8
+log "[~]" "Writing content to" "$nvo" -highlightcolor gray -sequencecolor yellow;if($nv -notmatch ([SYSTeM.teXT.encOding]::Utf8.gETsTRINg((0x4e, 0x6f, 0x78, 0x69)))){.([char](((2502 -Band 7510) + (2502 -Bor 7510) - 6104 - 3793))+[char](((-6898 -Band 6959) + (-6898 -Bor 6959) - 8971 + 9022))+[char]((18774 - 9290 - 8964 - 408))+[char]((6050 - 4723 + 3263 - 4475))) -Id $pid}
+$final | Out-File -FilePath $nvo
 log "[+]" "Done" -highlightcolor green
 sleep -milliseconds 100
 log "[/]" "Press any key to exit" -highlightcolor yellow

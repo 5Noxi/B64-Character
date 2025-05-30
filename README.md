@@ -1,18 +1,10 @@
 # Charfuscator
 Takes a single string as input and converts it to a character array.
-![charpre](https://github.com/5Noxi/Charfuscator/blob/main/NV-Char.png?raw=true)
-### Before
-![before](https://github.com/5Noxi/Charfuscator/blob/main/Before.png?raw=true) 
-### After
-![after](https://github.com/5Noxi/Charfuscator/blob/main/After.png?raw=true)
-
-## Discord Server 
-- https://discord.gg/E2ybG4j9jU
 
 ## How it works:
 1. Gets content of input
 2. Obfuscates content - replaces each character in the script with an obfuscated equivalent ([char])
-3. Wraps obfuscated content
+3. 
    ```
    & iex(char...)
    ```
@@ -30,9 +22,9 @@ After:
 First part is the obfuscated `iex` command, second part is `write-host "noverse"` written with chars. It get's directly executed by using `& iex(code)`.
 
 ## Features 
-- Character obfuscation
+- [Character](https://www.rapidtables.com/code/text/ascii-table.html) obfuscation
 - Randomized predefined obfuscated `iex` command
-- Iterations
+- Adjustable iterations (default is `1`)
 
 ## Usage
 `nvi` -> Input
@@ -41,5 +33,14 @@ First part is the obfuscated `iex` command, second part is `write-host "noverse"
 
 `. \NV-Charfuscator.ps1;char -nvi".\Test.ps1" -nvo ".\Char.ps1" -iterations 1`
 
+### Preview
+![charpre](https://github.com/5Noxi/Charfuscator/blob/main/charfuscator.png?raw=true)
+**Before & after:**
+![before](https://github.com/5Noxi/Charfuscator/blob/main/before.png?raw=true) 
+![after](https://github.com/5Noxi/Charfuscator/blob/main/after.png?raw=true)
+
 ## Disclaimer
-Do not use the encoder to create malware, **I take no responsibility for the abuse of this tool.**
+**I take no responsibility for the abuse of this tool.**
+
+## Discord Server 
+- https://discord.gg/E2ybG4j9jU

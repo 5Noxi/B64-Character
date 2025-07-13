@@ -3,6 +3,7 @@
 Encodes your code by using [B64](https://www.base64decode.org/) or obfuscates it using [characters](https://www.rapidtables.com/code/text/ascii-table.html) (character array). Both shouldn't be used, if you want to make your code hard to read. These are the most basic encoding/obfuscation techniques for powershell, you could decode the B64 encoded code with a website. 
 
 `Base64` - Single `FromBase64String`, everything related is randomized obfuscated
+
 `Character` - Converts input characters to its ASCII integer (dec)
 ```ps
 $calcs = @(

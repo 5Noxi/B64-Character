@@ -2,6 +2,9 @@
 
 Encodes your code by using [B64](https://www.base64decode.org/) or obfuscates it using [characters](https://www.rapidtables.com/code/text/ascii-table.html) (character array). Both shouldn't be used, if you want to make your code hard to read. These are the most basic encoding/obfuscation techniques for powershell, you could decode the B64 encoded code with a website. 
 
+Preview:
+![pre](https://github.com/user-attachments/assets/c35ef9a2-715d-4c0c-a6c4-87ba6633990c)
+
 `Base64` - Single `FromBase64String`, everything related is randomized obfuscated
 
 `Character` - Converts input characters to its ASCII integer (dec)

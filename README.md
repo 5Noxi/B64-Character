@@ -6,9 +6,6 @@ Preview:
 
 https://github.com/user-attachments/assets/c2d4f4fd-be28-453c-ba75-008de44888d3
 
-`Base64` - Single `FromBase64String`, everything related is randomized obfuscated
-
-`Character` - Converts input characters to its ASCII integer (dec)
 ```ps
 $calcs = @(
     "(out+add-add)",
@@ -34,7 +31,8 @@ Uses predefined calculations with a random integer (`add`), instead of returning
 
 Default value for `Iterations` is `1`, if increasing it too much while using B64 the file size will increase exponential. Increasing the iterations while using `Character` it'll increase the startup time by a lot. If you want to increase the iterations ideally only for `B64`.
 
-Preview using https://discord.com/channels/836870260715028511/1355572214489153756/1392193389537005700:
-
-## Discord Server 
-- https://discord.gg/E2ybG4j9jU
+## GUI Buttons
+| Button      | Description                                                                                                     |
+|-------------|-----------------------------------------------------------------------------------------------------------------|
+| `Base64`    | Uses a single `FromBase64String`. Everything related to this process is randomized and obfuscated.              |
+| `Character` | Converts each input character to its ASCII integer (`dec`).                                                     |

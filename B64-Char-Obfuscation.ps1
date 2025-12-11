@@ -15,7 +15,7 @@
 $nv = "Authored by Nohuxi"
 $ErrorActionPreference = "SilentlyContinue"
 $ProgressPreference = "SilentlyContinue"
-if (!(Test-Path "$env:temp\Noverse.ico")) {iwr -uri "https://github.com/5Noxi/5Noxi/releases/download/Logo/Noverse.ico" -out "$env:temp\Noverse.ico"}
+if (!(Test-Path "$env:temp\Noverse.ico")) {iwr -uri "https://github.com/nohuto/nohuto/releases/download/Logo/Noverse.ico" -out "$env:temp\Noverse.ico"}
 
 function log {
     param ([string]$HighlightMessage, [string]$Message, [string]$Sequence = '',[ConsoleColor]$TimeColor = 'DarkGray', [ConsoleColor]$HighlightColor = 'White', [ConsoleColor]$MessageColor = 'White', [ConsoleColor]$SequenceColor = 'White')
